@@ -54,10 +54,11 @@ def reformat_languages(languages)
         data.each do |type,type_of_language|
           language[type] = type_of_language
         end
+        binding.pry
       else 
         
       end
-      binding.pry  
+      
     end
     
     
