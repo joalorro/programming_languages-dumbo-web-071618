@@ -1,3 +1,66 @@
+require 'pry'
+
+languages = {
+  :oo => {
+    :ruby => {
+      :type => "interpreted"
+    },
+    :javascript => {
+      :type => "interpreted"
+    },
+    :python => {
+      :type => "interpreted"
+    },
+    :java => {
+      :type => "compiled"
+    }
+  },
+  :functional => {
+    :clojure => {
+      :type => "compiled"
+    },
+    :erlang => {
+      :type => "compiled"
+    },
+    :scala => {
+      :type => "compiled"
+    },
+    :javascript => {
+      :type => "interpreted"
+    }
+ 
+  }
+}
+
 def reformat_languages(languages)
-  # your code here
+  new_hash = {}
+  
+  #Initial process of iterating through the old hash and gathering information about each language  
+  
+  languages.each do |style,languages_hash|
+    #create a new placeholder hash for each language to be added to new_hash
+    new_language = {}
+    
+    if new_language[:style] == nil 
+      new_language[:style] = style
+    else 
+      new_language[:style] << style 
+    end
+    
+    language_hash.each do |language,data|
+      language = 
+      
+      new_language = new_hash[language.to_sym]
+      new_language = {} if new_language = nil 
+      
+      data.each do |type,type_of_language|
+        new_language[]
+      end
+    end
+    
+    
+    
+  end
+  #secondary process of reorganzing a new hash based on the first step 
+  
 end
