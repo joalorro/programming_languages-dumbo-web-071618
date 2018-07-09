@@ -39,17 +39,17 @@ def reformat_languages(languages)
   
   languages.each do |style,languages_hash|
     #create a new placeholder hash for each language to be added to new_hash
-    new_language = {}
+    language_placeholder = {}
     
-    if new_language[:style] == nil 
-      new_language[:style] = style
+    if language_placeholder[:style] == nil 
+      language_placeholder[:style] = style
     else 
-      new_language[:style] << style 
+      language_placeholder[:style] << style 
     end
     
     language_hash.each do |language,data|
-      language = 
-      
+      language = language_placeholder
+      binding.pry
       new_language = new_hash[language.to_sym]
       new_language = {} if new_language = nil 
       
