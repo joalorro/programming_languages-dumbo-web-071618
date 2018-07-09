@@ -51,7 +51,7 @@ def reformat_languages(languages)
       language = language_placeholder
       binding.pry
       new_language = new_hash[language.to_sym]
-      new_language = {} if new_language = nil 
+      new_language = {} if new_language == nil 
       
       data.each do |type,type_of_language|
         new_language[]
