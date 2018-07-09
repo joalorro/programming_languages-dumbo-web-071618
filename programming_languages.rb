@@ -43,7 +43,6 @@ def reformat_languages(languages)
     language_data.each do |language,language_type|
       class_for_new_lang = language.to_sym
     end
-    puts "cant get here "
     binding.pry
     
     language_data.each do |lanuage,language_type|
