@@ -45,17 +45,15 @@ def reformat_languages(languages)
       new_language[language_class] = {}  if new_language[language_class] == nil 
       
       language_type.each do |type_class,type|
-        new_language[type.to_sym] = type 
+        new_language[language_class][type.to_sym] = type 
       end
       
-      if new_language[:style] == nil 
-        new_language[:style] = style
-      else
-        new_language[:style]
       
     end
     
+    new_language[language_class][:style] << style 
     
+    binding.pry
     
     new_language.each do |name,data|
       data.each do |category,datum|
