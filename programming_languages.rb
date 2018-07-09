@@ -38,11 +38,9 @@ def reformat_languages(languages)
   languages.each do |style,language_data|
     #establishing a new hash for each NEW language 
     new_language = {}
-    class_for_new_lang = :class
     
     language_data.each do |language,language_type|
-      class_for_new_lang = language.to_sym
-      new_language
+      new_language[language.to_sym] = {language_type}
     end
     binding.pry
     
