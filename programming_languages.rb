@@ -48,11 +48,9 @@ def reformat_languages(languages)
         new_language[language_class][type.to_sym] = type 
       end
       
-      
+      new_language[language_class][:style] << style   
     end
-    
-    new_language[language_class][:style] << style 
-    
+
     binding.pry
     
     new_language.each do |name,data|
