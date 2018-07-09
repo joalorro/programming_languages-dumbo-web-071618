@@ -40,7 +40,7 @@ def reformat_languages(languages)
     new_language = {}
     
     language_data.each do |language,language_type|
-      new_language[language.to_sym]={language_type}
+      new_language[language.to_sym]=language_type
     end
     binding.pry
     
