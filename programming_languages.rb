@@ -47,7 +47,7 @@ def reformat_languages(languages)
         
         new_language[language_class] = {}
         language_type.each do |type_class,type|
-          new_language[language_class][type.to_sym] = type 
+          new_language[language_class][:type] = type 
         end
         
         if new_language[language_class][:style] == nil 
