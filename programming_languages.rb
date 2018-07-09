@@ -56,7 +56,6 @@ def reformat_languages(languages)
     end
     
     new_hash.merge!(new_language)
-    binding.pry
   end
   
 end
