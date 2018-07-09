@@ -51,10 +51,12 @@ def reformat_languages(languages)
           new_language[language_class][:type] = type 
         end
         
-        new_language[language_class][:style] = [style]   
+        if new_language[language_class][:style] == nil 
+          new_language[language_class][:style] = [style]
+        else 
+          new_language[language_class][:style] << style
+        end
         
-      else
-        new_language[language_class][:style] << style
       end
         
     end
