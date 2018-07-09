@@ -58,14 +58,8 @@ def reformat_languages(languages)
       end
         
     end
-
-    binding.pry
     
-    new_language.each do |name,data|
-      data.each do |category,datum|
-        
-      end
-    end
+    binding.pry
   end
   
 end
