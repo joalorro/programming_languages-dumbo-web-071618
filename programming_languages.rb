@@ -55,6 +55,7 @@ def reformat_languages(languages)
         else 
           new_language[language_class][:style] << style
         end
+        
       end
         
     end
