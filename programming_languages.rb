@@ -48,15 +48,16 @@ def reformat_languages(languages)
     end
   
     languages_hash.each do |language,data|
-      if language[data] = nil 
+      
+      if new_hash[language] = nil 
         language = language_placeholder
         data.each do |type,type_of_language|
           language[type] = type_of_language
         end
-        
-      binding.pry  
+      else 
         
       end
+      binding.pry  
     end
     
     
