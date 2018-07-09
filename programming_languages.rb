@@ -41,25 +41,20 @@ def reformat_languages(languages)
     language_class = :class 
     
     language_data.each do |language_name,language_type|
-      
       language_class = language_name.to_sym
       
-      if new_language[language_class] == nil 
-        
+      if new_hash[language_class] == nil 
         new_language[language_class] = {}
+        new_language[language_class][:style] = []
         language_type.each do |type_class,type|
           new_language[language_class][:type] = type 
         end
-        
-        if new_language[language_class][:style] == nil 
-          new_language[language_class][:style] = [style]
-        else 
-          new_language[language_class][:style] << style
-        end
-        
+      else
+        new_hash[language_class][:style] << style 
       end
-        
+      
     end
+    
     new_hash.merge!(new_language)
     binding.pry
   end
