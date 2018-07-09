@@ -45,10 +45,10 @@ def reformat_languages(languages)
       
       if new_hash[language_class] == nil 
         new_language[language_class] = {}
-        new_language[language_class][:style] = [style]
         language_type.each do |type_class,type|
           new_language[language_class][:type] = type 
         end
+        new_language[language_class][:style] = [style]
       else
         new_hash[language_class][:style] << style 
       end
