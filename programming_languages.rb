@@ -52,7 +52,7 @@ def reformat_languages(languages)
       binding.pry
       
       data.each do |type,type_of_language|
-        new_language[]
+        
       end
     end
     
