@@ -35,35 +35,22 @@ languages = {
 def reformat_languages(languages)
   new_hash = {}
   
-  #Initial process of iterating through the old hash and gathering information about each language  
-  
-  languages.each do |style,languages_hash|
-    #create a new placeholder hash for each language to be added to new_hash
-    language_placeholder = {}
+  languages.each do |style,language_data|
+    #establishing a new hash for each NEW language 
+    new_language = {}
+    class_for_new_lang = :class
     
-    if language_placeholder[:style] == nil 
-      language_placeholder[:style] = style
-    else 
-      language_placeholder[:style] << style 
+    language_data.each do |lanuage,language_type|
+      class_for_new_lang = language.to_sym
+      binding.pry
     end
-  
-    languages_hash.each do |language,data|
-      
-      if new_hash[language] = nil 
-        language = language_placeholder
-        data.each do |type,type_of_language|
-          language[type] = type_of_language
-        end
-        binding.pry
-      else 
+    
+    
+    language_data.each do |lanuage,language_type|
+      language_type do |type_class,type|
         
       end
-      
     end
-    
-    
-    
   end
-  #secondary process of reorganzing a new hash based on the first step 
   
 end
