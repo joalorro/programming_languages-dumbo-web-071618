@@ -48,7 +48,11 @@ def reformat_languages(languages)
         new_language[language_class][type.to_sym] = type 
       end
       
-      new_language[language_class][:style] << style   
+      if new_language[language_class][:style] == nil 
+        new_language[language_class][:style] = [style]   
+      else 
+        new_language[language_class][:style] << style
+      end
     end
 
     binding.pry
