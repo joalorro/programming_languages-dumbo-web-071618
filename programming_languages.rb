@@ -40,7 +40,7 @@ def reformat_languages(languages)
     new_language = {}
     class_for_new_lang = :class
     
-    language_data.each do |lanuage,language_type|
+    language_data.each do |language,language_type|
       class_for_new_lang = language.to_sym
       
     end
