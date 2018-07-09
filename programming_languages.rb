@@ -49,7 +49,6 @@ def reformat_languages(languages)
   
     languages_hash.each do |language,data|
       language = language_placeholder
-      
       binding.pry
       
       data.each do |type,type_of_language|
